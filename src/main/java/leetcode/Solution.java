@@ -1,12 +1,12 @@
 package leetcode;
 
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.HashMap;
 
 public class Solution {
 
     public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> diffIdxMap = new TreeMap<>();
+        Map<Integer, Integer> diffIdxMap = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             Integer j = diffIdxMap.get(nums[i]);
