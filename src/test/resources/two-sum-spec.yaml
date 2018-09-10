@@ -1,0 +1,26 @@
+cases:
+- id: nums = [], target = 0
+  input:
+    nums: []
+    target: 0
+  output: []
+- id: nums = [1, 2], target = 3
+  input:
+    nums: [1, 2]
+    target: 3
+  output: [0, 1]
+- id: nums = [0, 1, 2, 0], target = 0
+  input:
+    nums: [0, 1, 2, 0]
+    target: 0
+  output: [0, 3]
+- id: nums = [2, 7, 11, 15], target = 9
+  input:
+    nums: [2, 7, 11, 15]
+    target: 9
+  output: [0, 1]
+- id: nums = [1, 2], target = 4
+  input:
+    nums: [1, 2]
+    target: 4
+  output: []
