@@ -4,15 +4,12 @@ import yspec.YSpecSuite
 
 class SolutionTest extends YSpecSuite {
 
-  type Input = TwoSumInput
-  type Output = List[Int]
-
-  YSpec
-    .fromResource[Input, Output]("two-sum-spec.yaml")
-    .run(
-      { case TwoSumInput(nums, target) => new Solution().twoSum(nums.toArray, target) },
-      _.toArray
-    )
+  "two-sum-spec.yaml".run { input: TwoSumInput =>
+    input match {
+      case TwoSumInput(nums, target) =>
+        Solution.twoSum(nums, target)
+    }
+  }
 }
 
-case class TwoSumInput(nums: List[Int], target: Int)
+case class TwoSumInput(nums: Array[Int], target: Int)
